@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "first book",
+      "autor": "Aizat K",
+      "img": "https://www.potentialproject.com/wp-content/uploads/2018/03/book-2-977x1024.png",
+      "isAvailable": true,
+      "isNew": true
+    },
+    {
+      "id": 2,
+      "name": "second book",
+      "autor": "Aizat K",
+      "img": "https://www.potentialproject.com/wp-content/uploads/2018/03/book-2-977x1024.png",
+      "isAvailable": true,
+      "isNew": true
+    },
+    {
+      "id": 3,
+      "name": "hello",
+      "autor": "Aizat K",
+      "img": "https://www.potentialproject.com/wp-content/uploads/2018/03/book-2-977x1024.png",
+      "isAvailable": true,
+      "isNew": true
+    },
+    {
+      "id": 4,
+      "name": "this is Another",
+      "autor": "Aizat K",
+      "img": "https://www.potentialproject.com/wp-content/uploads/2018/03/book-2-977x1024.png",
+      "isAvailable": true,
+      "isNew": true
+    },
+    {
+      "id": 5,
+      "name": "First one",
+      "autor": "Aizat K",
+      "img": "https://www.potentialproject.com/wp-content/uploads/2018/03/book-2-977x1024.png",
+      "isAvailable": true,
+      "isNew": true
+    }
+  ]
+}
