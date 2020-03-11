@@ -1,0 +1,34 @@
+.header{
+  background-color: #7DC9E7;
+  height: 500px;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.img{
+    background-size: cover;
+    height: 10em;
+    background-image: url(/static/media/banner.dd215479.png);
+    background-repeat: no-repeat;
+}
+
+.header h1{
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.header button{
+  background-color: #fff;
+  border: 3px solid #1890ff;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+@media(max-width: 992px){
+  .header{
+    flex-direction: column;
+  }
+}

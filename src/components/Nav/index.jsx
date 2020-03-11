@@ -1,30 +1,38 @@
 import React, {useState} from 'react';
 import css from './nav.module.css';
-import cn from 'classnames';
+import {Drawer} from 'antd';
 import logo from '../../assets/icons/logo_line.svg';
+import burgerBtn from '../../assets/icons/burger_menu.svg';
 
-function Nav(){
+function Nav({links}){
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className={css.nav}>
+    <nav className={css.nav}>
       <div className={css.logo}>
         <img src={logo} alt="logo"/>
       </div>
       <div className={css.bottom}>
-        <div className={cn(css.menuToggle, {open: isOpen})}
-            onClick={()=> setIsOpen(!isOpen)} >
-          <div className={css.one}></div>
-          <div className={css.two}></div>
-          <div className={css.three}></div>
+        <div className={css.menuToggle}
+        onClick={()=> setIsOpen(!isOpen)}>
+            <img src={burgerBtn} alt="burger menu"/>
         </div>
         <ul className={css.menu}>
-          <li><a href="#">Про проект</a></li>
-          <li><a href="#">Поиск</a></li>
-          <li><a href="#">Создатели</a></li>
-          <li><a href="#">Контакты</a></li>
+          {Object.entries(links).map(([key, value])=> <li><a href={value}>{key}</a></li>)}
         </ul>
       </div>
-    </header>
+      {isOpen && <Drawer
+        className={css.drawer}
+        placement="right"
+        closable={true}
+        onClose={()=> setIsOpen(!isOpen)}
+        visible={isOpen}
+        getContainer={false}
+        >
+          <ul>
+            {Object.entries(links).map(([key, value])=> <li><a href={value}>{key}</a></li>)}
+          </ul>
+        </Drawer>}
+    </nav>
   );
 }
 

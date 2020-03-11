@@ -1,16 +1,21 @@
-header{
+nav{
     background-color: #fff;
     position: relative;
     z-index: 2;
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    box-shadow: -4px 2px 8px 1px grey;
 }
-
 
 .logo{
     width: 50%;
     max-width: 300px;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
 }
 
 .menuToggle{
@@ -21,33 +26,31 @@ header{
     align-content: center;
     display: flex;
     list-style: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0;
 }
+
+.menu li{
+    padding: 0 5px;
+}
+
 
 @media(max-width: 992px){
     .menu{
         display: none;
     }
     .menuToggle{
-        width: 24px;
-        height: 26px;
+        width: 30px;
         display: block;
         z-index: 4;
         cursor: pointer;
     }
-    .menuToggle .open .one {
-        transform: rotate(45deg) translate(4px, 4px);
-    }
-    .menuToggle .open .two {
-        opacity: 0;
-    }
-    .menuToggle .open .three {
-        transform: rotate(-45deg) translate(7px, -8px);
-    }
-    .one, .two, .three{
+    .menuToggle img{
         width: 100%;
-        height: 2px;
-        margin: 6px auto;
-        background-color: #000;
-
+    }
+    .drawerMenu{
+        font-size: 1.5em;
+        list-style-type: none;
     }
 }
